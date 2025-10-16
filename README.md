@@ -1,0 +1,1 @@
+# SITEF bot that provides a fast answer on error codes
