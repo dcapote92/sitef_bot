@@ -1,4 +1,4 @@
-erros = {
+errors = {
     # Baseado na documentação oferecida pelo Gerente de Telecomunicações do Grupo Mateus, Arthur Turrini
     '00': ('Transação Nacional Autorizada com Sucesso', 'N/A', False),
     '01': ('Transção referida pelo emissor.', 'Oriente o portador a contatar o emissor do cartão.', False),

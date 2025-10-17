@@ -1,7 +1,7 @@
 # developed by @dcapote92
 
 from telebot import TeleBot as tbot
-from erros import erros
+from errors import errors
 
 bot = tbot('8453280249:AAHoPzyFxUZinr-Qf9FwBeuUClsOUPf6AOk')
 
@@ -19,13 +19,10 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda message:'00')
 def send_message(message):
-    '''for e in erros.keys():
-        if message.text == e:
-            bot.reply_to(message,erros[e])'''
-    if message.text in erros:
-        descricao_erro, acao_erro, permite_retentativa = erros[message.text]
-        retentativa_status = options['retentativa_sim'] if permite_retentativa else options['retentativa_nao']
-        final_message = f'Código: {message.text}{options['descricao']}{descricao_erro}{options['acao']}{acao_erro}{retentativa_status}'
+    if message.text in errors:
+        error_description, to_do, allow_retry = errors[message.text]
+        retry_status = options['retentativa_sim'] if allow_retry else options['retentativa_nao']
+        final_message = f'Código: {message.text}{options['descricao']}{error_description}{options['acao']}{to_do}{retry_status}'
         bot.reply_to(message, final_message)
 
 bot.infinity_polling()
