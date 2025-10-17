@@ -1,9 +1,11 @@
 # developed by @dcapote92
 
 from telebot import TeleBot as tbot
+from os import getenv
 from errors import errors
 
-bot = tbot('8453280249:AAHoPzyFxUZinr-Qf9FwBeuUClsOUPf6AOk')
+token = getenv('BOT_TOKEN')
+bot = tbot(token)
 
 options = {
     'descricao' : '\nDescrição ⚠️:  ',
