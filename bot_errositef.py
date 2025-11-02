@@ -21,7 +21,13 @@ SESSION_NAME = "bot_session"
 # =========================================================
 # Get pyrogram client started
 # =========================================================
-app = Client( SESSION_NAME, api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN, parse_mode=ParseMode.MARKDOWN )
+app = Client( 
+    SESSION_NAME,
+    api_id=int(API_ID),
+    api_hash=API_HASH,
+    bot_token=BOT_TOKEN,
+    parse_mode=ParseMode.MARKDOWN
+)
 
 
 
