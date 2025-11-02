@@ -14,6 +14,12 @@ API_HASH = getenv('ES_API_HASH')
 # Get your token on both father
 BOT_TOKEN = getenv('ES_TOKEN') # process_assistant
 
+# Env variables check
+if not API_ID or not API_HASH or not BOT_TOKEN:
+    print("ERRO DE AMBIENTE: API_ID, API_HASH ou BOT_TOKEN não estão definidos. Verifique seu export ou .env.")
+    exit(1)
+
+
 # this is justo set a session name ( can be anything)
 SESSION_NAME = "bot_session" 
 
