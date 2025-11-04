@@ -7,15 +7,16 @@ services:
 
     environment:
      ES_TOKEN: ${ES_TOKEN}
-     ES_API_ID: ${ES_API_ID}
-     ES_API_HASH: ${ES_API_HASH}
+     API_ID: ${API_ID}
+     API_HASH: ${API_HASH}
      
     network_mode: host
     
     volumes:
      - type: volume
        source: bot_data
-       target: /app
+       target: /appls
+       
 
 volumes:
  bot_data:         

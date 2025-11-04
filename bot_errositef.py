@@ -8,15 +8,15 @@ from errors import errors
 
 
 # Need to create an app on my.telegram.org in order to receive API_ID and API_HASH 
-API_ID = getenv('ES_API_ID') 
-API_HASH = getenv('ES_API_HASH')
+API_ID = getenv('API_ID') 
+API_HASH = getenv('API_HASH')
 
 # Get your token on both father
-BOT_TOKEN = getenv('ES_TOKEN') # process_assistant
+ES_TOKEN = getenv('ES_TOKEN') # process_assistant
 
 # Env variables check
-if not API_ID or not API_HASH or not BOT_TOKEN:
-    print("ERRO DE AMBIENTE: API_ID, API_HASH ou BOT_TOKEN não estão definidos. Verifique seu export ou .env.")
+if not API_ID or not API_HASH or not ES_TOKEN:
+    print("ERRO DE AMBIENTE: API_ID, API_HASH ou ES_TOKEN não estão definidos. Verifique seu export ou .env.")
     exit(1)
 
 
@@ -31,7 +31,7 @@ app = Client(
     SESSION_NAME,
     api_id=int(API_ID),
     api_hash=API_HASH,
-    bot_token=BOT_TOKEN,
+    bot_token=ES_TOKEN,
     parse_mode=ParseMode.MARKDOWN
 )
 
