@@ -9,16 +9,5 @@ services:
      ES_TOKEN: ${ES_TOKEN}
      API_ID: ${API_ID}
      API_HASH: ${API_HASH}
-     
-    network_mode: host
-    
-    volumes:
-     - type: volume
-       source: bot_data
-       target: /appls
-       
-
-volumes:
- bot_data:         
 
 
